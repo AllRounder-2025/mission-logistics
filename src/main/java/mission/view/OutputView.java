@@ -1,11 +1,13 @@
 package mission.view;
 
 import java.util.Date;
+
+import mission.constants.Text;
 import mission.service.TimeService;
 
 public class OutputView {
     public static void outputMission(Date eta) {
-        System.out.printf("이동 시간은 %d시간 %d분으로 예측됩니다.",
+        System.out.printf(Text.SUCCESS_OPERATION.getMessage(),
                 TimeService.getHours(eta),
                 TimeService.getMinutes(eta)
         );
