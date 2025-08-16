@@ -53,6 +53,9 @@ public class Controller {
         double distance = distanceService.getDistance(fromPosition, toPosition);
         double travelTime = TimeService.predictTravelTimeHours(distance);
         
-        OutputView.outputMission(travelTime);
+        int hours = (int) travelTime;
+        int minutes = (int) Math.round((travelTime - hours) * 60);
+        
+        OutputView.outputMission(hours, minutes);
     }
 }
