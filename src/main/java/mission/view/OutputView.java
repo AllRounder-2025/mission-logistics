@@ -6,6 +6,6 @@ public class OutputView {
     public static void outputMission(double time) {
         int hours = (int) time;
         int minutes = (int) Math.round((time - hours) * 60);
-        System.out.printf(Text.SUCCESS_OPERATION.getMessage(), hours, minutes);
+        System.out.printf(Text.SUCCESS_OPERATION.getMessage() + "\n", hours, minutes);
     }
 }
