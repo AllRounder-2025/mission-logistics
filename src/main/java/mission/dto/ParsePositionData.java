@@ -11,7 +11,12 @@ public class ParsePositionData implements ParseCsv<Position> {
         List<Position> positions = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(csv))) {
             String line;
+            boolean firstLine = true;
             while ((line = br.readLine()) != null) {
+                if (firstLine) {
+                    firstLine = false;
+                    continue;
+                }
                 String[] values = line.split(",");
                 if (values.length == 3) {
                     int id = Integer.parseInt(values[0]);
