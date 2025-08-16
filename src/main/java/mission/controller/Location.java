@@ -3,8 +3,8 @@ package mission.controller;
 import mission.constants.Text;
 
 public record Location(
-    int id,
-    int[] coordinates
+        int id,
+        double[] coordinates
 ) {
     public Location {
         if (coordinates.length != 2) {
