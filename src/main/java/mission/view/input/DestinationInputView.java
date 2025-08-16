@@ -1,6 +1,7 @@
-package mission.view;
+package mission.view.input;
 
 import mission.constants.Text;
+import mission.view.InputView;
 
 public class DestinationInputView extends InputView {
     @Override

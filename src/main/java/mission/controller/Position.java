@@ -2,11 +2,11 @@ package mission.controller;
 
 import mission.constants.Text;
 
-public record Location(
+public record Position(
         int id,
         double[] coordinates
 ) {
-    public Location {
+    public Position {
         if (coordinates.length != 2) {
             throw new IllegalArgumentException(Text.ERROR_LOCATION_ILLEGAL_DIMENTIONS.getMessage());
         }

@@ -1,7 +1,6 @@
 package mission.view;
 
 import api.Console;
-import mission.constants.Text;
 
 public abstract class InputView {
     public String input() {

@@ -20,7 +20,7 @@ public class ValidateInput {
         }
     }
 
-    public static void validateLocationDimensions(double[] coordinates) {
+    public static void validatePositionDimensions(double[] coordinates) {
         if (coordinates == null || coordinates.length != 2) {
             throw new IllegalArgumentException(Text.ERROR_LOCATION_ILLEGAL_DIMENTIONS.getMessage());
         }

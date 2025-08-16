@@ -3,12 +3,12 @@ package mission.dto;
 import java.util.List;
 import java.util.ArrayList;
 import java.io.*;
-import mission.controller.Location;
+import mission.controller.Position;
 
-public class ParseLocationData implements ParseCsv<Location> {
+public class ParsePositionData implements ParseCsv<Position> {
     @Override
-    public List<Location> parse(String csv) {
-        List<Location> locations = new ArrayList<>();
+    public List<Position> parse(String csv) {
+        List<Position> positions = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(csv))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -17,14 +17,14 @@ public class ParseLocationData implements ParseCsv<Location> {
                     int id = Integer.parseInt(values[0]);
                     double lat = Double.parseDouble(values[1]);
                     double lng = Double.parseDouble(values[2]);
-                    locations.add(
-                        new Location(id, new double[]{lat, lng})
+                    positions.add(
+                        new Position(id, new double[]{lat, lng})
                     );
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return locations;
+        return positions;
     }
 }
