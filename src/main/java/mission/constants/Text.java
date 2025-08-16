@@ -1,7 +1,8 @@
 package mission.constants;
 
 public enum Text {
-    ACQUIRE_FOR_INPUT("출발지를 입력해주세요."),
+    ACQUIRE_FOR_DEPARTURE("출발지를 입력해주세요."),
+    ACQUIRE_FOR_DESTINATION("도착지를 입력해주세요."),
     ERROR_PLACE_NAME_BLANK("장소의 이름은 비어있을 수 없습니다."),
     ERROR_PLACE_LOCATION_BLANK("장소의 위치는 비어있을 수 없습니다."),
     ERROR_LOCATION_ILLEGAL_DIMENTIONS("장소의 좌표는 2차원이어야 합니다."),

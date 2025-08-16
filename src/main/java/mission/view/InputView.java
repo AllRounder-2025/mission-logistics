@@ -1,17 +1,13 @@
 package mission.view;
 
+import api.Console;
 import mission.constants.Text;
 
-public class InputView {
-    public static String inputMission() {
-        System.out.println(Text.ACQUIRE_FOR_INPUT.getMessage());
+public abstract class InputView {
+    public String input() {
+        System.out.println(getMessage());
         System.out.println("> ");
-        String input;
-        try {
-            input = System.console().readLine();
-        } catch (Exception e) {
-            input = "";
-        }
-        return input;
+        return Console.readLine();
     }
+    protected abstract String getMessage();
 }
